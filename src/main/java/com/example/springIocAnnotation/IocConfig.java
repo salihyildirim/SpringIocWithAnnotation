@@ -7,9 +7,11 @@ import com.example.springIocAnnotation.Service.ICustomerService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Configuration
+@PropertySource("classpath:values.properties")
 public class IocConfig {
 
     @Bean("customerDao")
