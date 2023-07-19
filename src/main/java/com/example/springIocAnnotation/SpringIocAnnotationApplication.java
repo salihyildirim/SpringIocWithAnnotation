@@ -17,8 +17,13 @@ public class SpringIocAnnotationApplication {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(IocConfig.class);
 
 
-		ICustomerService customerService= context.getBean("customerService", ICustomerService.class);
-		customerService.add();
+//		ICustomerService customerService= context.getBean("customerService", ICustomerService.class);
+//		customerService.add();
+//
+
+
+		ICustomerDao customer= (ICustomerDao)context.getBean("customer");
+		customer.add();
 	}
 
 }

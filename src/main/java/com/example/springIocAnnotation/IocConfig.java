@@ -5,18 +5,19 @@ import com.example.springIocAnnotation.Dao.ICustomerDao;
 import com.example.springIocAnnotation.Service.CustomerService;
 import com.example.springIocAnnotation.Service.ICustomerService;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
 @Configuration
-@PropertySource("classpath:values.properties")
+@PropertySource("values.properties")
 public class IocConfig {
 
-    @Bean("customerDao")
+    @Bean("customer")
     public ICustomerDao customerDao(){
-        return new Customer();
+        Customer customer= new Customer();
+        customer.setName("salihovic");
+        return customer;
+
     }
 
     @Bean("customerService")

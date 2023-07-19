@@ -10,7 +10,7 @@ public class Customer implements ICustomerDao {
 
     @Override
     public void add() {
-        System.out.println("Ben CustomerDao ve name : "+getName());
+        System.out.println("Ben Customer ve name : "+getName());
     }
 
     public String getName() {
